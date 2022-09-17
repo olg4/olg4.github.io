@@ -32,11 +32,29 @@ main {
     overflow-y: hidden
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#hamburger-container {
+    cursor: pointer;
+}
+
 .hamburger {
     width: 35px;
     height: 2px;
     background-color: white;
     margin: 6px 0;
+}
+
+#contact {
+    display: none;
+    color: white;
+    margin-right: 0;
+    margin-left: auto;
+    font-family: 'Lato';
 }
 
 .main-view {
@@ -115,7 +133,7 @@ main {
     min-width: 5em;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
-    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
     overflow: hidden;
     color: white;
     backdrop-filter: blur(14px);
@@ -127,12 +145,21 @@ main {
     background-image: url(img/github.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 4em;
-    height: 4em;
+    opacity: 0.2;
+    width: 2.8em;
+    height: 2.8em;
+    margin: 1em auto;
 }
 
-.contact-icon {
+.linkedin-icon {
     position: relative;
+    background-image: url(img/linkedin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    width: 3em;
+    height: 3em;
+    margin: 1em auto;
 }
 
 .main-card:hover {
@@ -161,7 +188,7 @@ main {
 .card-container {
     width: 20em;
     min-width: 20em;
-    height: 25em;
+    height: 27em;
     margin: 20px;
 }
 
@@ -278,9 +305,7 @@ svg circle:last-of-type {
     display: none;
     text-align: justify;
     color: white;
-    border-left: 3px solid white;
-    padding-left: 3%;
-    font-family: 'Lato';
+    font-family: "Open Sans", sans-serif;
 }
 
 #esi-intro {
@@ -292,11 +317,70 @@ svg circle:last-of-type {
     font-weight: 400;
 }
 
-#esi-link a,
-#esi-link:active a,
-#esi-link:visited a {
-    font-size: small;
-    color: #007bff;
-    text-decoration: none;
+.map-view {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 5%;
 }
 
+.world-map {
+    position: relative;
+    width: 50em;
+    height: 30em;
+    background-image: url(img/map.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.work-zone {
+    position: absolute;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    background-color:#4D6599;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+}
+
+.work-zone:hover {
+    transform: scale(1.2);
+}
+
+.zone-description {
+    position: absolute;
+    background-color: rgba(0,0,0,.8);
+    width: auto;
+    height: 4.5em;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.location {
+    font-size: small;
+}
+
+#belgium {
+    top: 5em;
+    right: 25em;
+}
+
+#belgium-description {
+    display: none;
+    right: 15em;
+}
+
+#reunion {
+    top: 15em;
+    right: 17em;
+}
+
+#reunion-description {
+    display: none;
+    top: 10em;
+    right: 7em;
+}

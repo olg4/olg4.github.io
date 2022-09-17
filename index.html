@@ -12,9 +12,14 @@
 
     <body>
 		<header>
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
-            <div class="hamburger"></div>
+            <nav>
+                <div id="hamburger-container">
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                </div>
+                <div id="contact">contact</div>
+            </nav>
         </header>
 
         <main>
@@ -35,10 +40,10 @@
                     </div>
                     <div class="main-card-container">
                         <div class="main-card">
-                            <div class="github-icon"></div>
+                            <a href="https://github.com/olg4" target="_blank"><div class="github-icon"></div></a>
                         </div>
                         <div class="main-card">
-                            <div class="contact-icon"></div>
+                            <a href="https://www.linkedin.com/in/olga-baitemirova-a32490241/" target="_blank"><div class="linkedin-icon"></div></a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +56,7 @@
                             <div class="front-card">
                                 <h3>Education</h3>
                                 <div id="diploma-icon"></div>
-                                <h3 class="text-card" id="diploma-name">IT Management Bachelor</h3>
+                                <h3 class="text-card" id="diploma-name">IT Management Bachelor's degree</h3>
                                 <h3 class="text-card">HE<span id="esi">2</span>B ESI 2022</h3>
                                 <div id="esi-description">
                                     <span id="esi-intro">The "management IT" section covers all areas of IT.</span><br/>
@@ -60,7 +65,6 @@
                                     This section develops more particularly professional skills oriented toward the 
                                     mastery of specific applications in management, business organization and project 
                                     management.</h5>
-                                    <span id="esi-link"><a href="https://www.he2b.be/formations/esi/informatique-gestion" target="blank_">see more</a></span>
                                 </div>
                             </div>
                             <div class="back-card">
@@ -119,6 +123,15 @@
                     </h1>
                 </div>
             </section>
+
+            <section class="map-view">
+                <div class="world-map">
+                    <div class="work-zone" id="belgium"></div>
+                    <div class="zone-description" id="belgium-description">HE2B-ESI<br/>IT Management Bachelor's degree<br/><span class="location">Belgium</span></div>
+                    <div class="work-zone" id="reunion"></div>
+                    <div class="zone-description" id="reunion-description">Departmental Council of Réunion<br/>Internship<br/><span class="location">France (Reunion Island)</span></div>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -144,6 +157,25 @@
                 $('#esi-description').show();
             }, function() {
                 $('#esi-description').hide();
+            });
+
+            $('#hamburger-container').on('click', function() {
+                $('#contact').show();
+            });
+
+            $('#belgium').on('click', function(e) {
+                e.stopPropagation(); 
+                $('#belgium-description').show();
+            });
+
+            $('#reunion').on('click', function(e) {
+                e.stopPropagation(); 
+                $('#reunion-description').show();
+            });
+
+            $('body').on('click', function() {
+                $('#belgium-description').hide();
+                $('#reunion-description').hide();
             });
         })
     </script>
