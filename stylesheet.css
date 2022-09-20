@@ -298,22 +298,23 @@ svg circle:last-of-type {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
+    overflow: hidden;
 }
 
 .world-map {
+    position: relative;
     display: none;
-    position: absolute;
-    width: 50em;
-    height: 30em;
-    background-image: url(img/map.png);
-    background-repeat: no-repeat;
-    background-size: contain;
     margin: 0 auto;
+    max-width: 50em;
+    overflow: auto;
+}
+
+.world-map-img {
+    width: 50em;
 }
 
 .work-location {
-    position: absolute;
     cursor: pointer;
     width: 1em;
     height: 1em;
@@ -327,10 +328,9 @@ svg circle:last-of-type {
 }
 
 .zone-description {
-    position: absolute;
+    position: relative;
     background-color: rgba(0,0,0,.8);
-    width: auto;
-    height: 4.5em;
+    width: 12em;
     color: white;
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -343,22 +343,27 @@ svg circle:last-of-type {
 }
 
 #belgium {
-    top: 5em;
-    right: 25em;
+    position: relative;
+    bottom: 16em;
+    left: 23.5em;
 }
 
 #belgium-description {
+    position: absolute;
     display: none;
-    right: 15em;
+    bottom: 18em;
+    left: 23.5em;
 }
 
 #reunion {
-    top: 15em;
-    right: 17em;
+    position: relative;
+    bottom: 7em;
+    left: 32em;
 }
 
 #reunion-description {
+    position: absolute;
     display: none;
-    top: 10em;
-    right: 7em;
+    bottom: 7.5em;
+    left: 32.5em;
 }
