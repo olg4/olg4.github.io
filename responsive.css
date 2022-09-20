@@ -1,0 +1,64 @@
+/*
+format: phone
+*/
+@media only screen and (max-width:992px) {
+
+    .main-view {
+        background-size: 100% 100%;
+    }
+
+    .resume-view {
+        background-size: 100% 100%;
+    }
+
+    .main-container {
+        padding-top: 4em;
+    }
+
+    .domain-container {
+        font-size: 1.5em;
+    }
+
+    #my-name {
+        font-size: 1em;
+    }
+
+    .ball {
+        height: 0.1em;
+        width: 0.1em;
+    }
+
+    .dev {
+        font-size: 3em;
+    }
+
+    .a-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #quote-container {
+        padding-right: 2em;
+        padding-left: 2em;
+        margin-top: -10em;
+    }
+
+    #quote-text {
+        font-size:medium;
+    }
+}
+
+/*
+format: tablet
+*/
+@media only screen and (max-width:1461px) and (min-width:992px) {
+    
+}
+
+@media only screen and (min-width:992px) {
+    
+}
+
+@media only screen and (min-width: 600px) {
+    
+}

@@ -4,7 +4,10 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="stylesheet" href="responsive.css" />
+        <script src="effects.js" defer></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <title>Olga</title>
@@ -25,9 +28,9 @@
         <main>
             <section class="main-view">
                 <div class="main-container">
+                    <div id="my-name">I'm Olga.</div>
                     <div class="domain-container">a Web <span class="ball"></span> Software <span class="ball"></span> Mobile</div>
                     <div class="developer-container">
-                        <div id="my-name">I'm Olga.</div>
                         <div class="dev">D</div>
                         <div class="dev">E</div>
                         <div class="dev">V</div>
@@ -67,12 +70,6 @@
                                     management.</h5>
                                 </div>
                             </div>
-                            <div class="back-card">
-                                <h3>Education</h3>
-                                <div id="diploma-icon"></div>
-                                <h3 class="text-card" id="diploma-name">IT Management Bachelor</h3>
-                                <h3 class="text-card">HE<span id="esi">2</span>B ESI</h3>
-                            </div>
                         </div>
                     </div>
 
@@ -87,26 +84,12 @@
                                 <h3 class="text-card" id="xp-length">a 4-months internship</h3>
                                 <h3 class="text-card">Departmental Council of Réunion</h3>
                             </div>
-                            <div class="back-card">
-                                <h3>Experience</h3>
-                                <svg>
-                                    <circle cx="35" cy="35" r="30"></circle>
-                                    <circle cx="35" cy="35" r="30" style="--percent: 2"></circle>
-                                </svg>
-                                <h3 class="text-card" id="xp-length">a 4-months internship</h3>
-                                <h3 class="text-card">Departmental Council of Réunion</h3>
-                            </div>
                         </div>
                     </div>
 
                     <div class="card-container">
                         <div class="a-card profile">
                             <div class="front-card">
-                                <h3>Profile</h3>
-                                <div id="profile-icon"></div>
-                                <h3 class="text-card" id="what-i-do">Web, Software & Mobile<br/>Developer based in Belgium</h3>
-                            </div>
-                            <div class="back-card">
                                 <h3>Profile</h3>
                                 <div id="profile-icon"></div>
                                 <h3 class="text-card" id="what-i-do">Web, Software & Mobile<br/>Developer based in Belgium</h3>
@@ -126,9 +109,9 @@
 
             <section class="map-view">
                 <div class="world-map">
-                    <div class="work-zone" id="belgium"></div>
+                    <div class="work-location" id="belgium"></div>
                     <div class="zone-description" id="belgium-description">HE2B-ESI<br/>IT Management Bachelor's degree<br/><span class="location">Belgium</span></div>
-                    <div class="work-zone" id="reunion"></div>
+                    <div class="work-location" id="reunion"></div>
                     <div class="zone-description" id="reunion-description">Departmental Council of Réunion<br/>Internship<br/><span class="location">France (Reunion Island)</span></div>
                 </div>
             </section>
@@ -138,45 +121,4 @@
         </footer>
           
     </body>
-
-    <script>
-        $(document).ready(function() {
-            document.addEventListener('mousemove', (event) => {
-                let x = event.clientX;
-                let y =  event.clientY;
-                if ((x >= 0 && x <= 1212) && (y >= 361 && y <= 731)) {
-                    $(".main-view").css("background-position-y", "-0.1em");
-                    $(".main-view").css("background-position-x", "0.05em");
-                } else {
-                    $(".main-view").css("background-position-y", "0");
-                    $(".main-view").css("background-position-x", "0");
-                }
-            });
-            
-            $('.education').hover(function() {
-                $('#esi-description').show();
-            }, function() {
-                $('#esi-description').hide();
-            });
-
-            $('#hamburger-container').on('click', function() {
-                $('#contact').show();
-            });
-
-            $('#belgium').on('click', function(e) {
-                e.stopPropagation(); 
-                $('#belgium-description').show();
-            });
-
-            $('#reunion').on('click', function(e) {
-                e.stopPropagation(); 
-                $('#reunion-description').show();
-            });
-
-            $('body').on('click', function() {
-                $('#belgium-description').hide();
-                $('#reunion-description').hide();
-            });
-        })
-    </script>
 </html>
