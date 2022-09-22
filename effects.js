@@ -1,10 +1,21 @@
 $(document).ready(function() {
 
+    $('.main-card').animate({'margin': '10px'});
+    $('.dev').animate({'margin-top': '0'});
+
+    let inViewportWelcome = false;
+    let inViewportDev = false;
     let inViewportResume = false;
     let inViewportQuote = false;
     let inViewportMap = false;
 
     window.addEventListener('scroll', function() {
+        let elementDev = document.querySelector('.dev');
+        let positionDev = elementDev.getBoundingClientRect();
+
+        let elementWelcome = document.querySelector('.main-card');
+        let positionWelcome = elementWelcome.getBoundingClientRect();
+
         let elementResume = document.querySelector('.a-container');
         let positionResume = elementResume.getBoundingClientRect();
 
@@ -15,6 +26,22 @@ $(document).ready(function() {
         let positionMap = elementMap.getBoundingClientRect();
         
         // checking for partial visibility
+        if((positionDev.top-100) < window.innerHeight && positionDev.bottom >= 0) {
+            if (!inViewportDev) $('.dev').animate({'margin-top': '0'});
+            inViewportDev = true;
+        } else {
+            inViewportDev = false;
+            $('.dev').css('margin-top', '-0.5em');
+        }
+
+        if((positionWelcome.top-100) < window.innerHeight && positionWelcome.bottom >= 0) {
+            if (!inViewportWelcome) $('.main-card').animate({'margin': '10px'});
+            inViewportWelcome = true;
+        } else {
+            inViewportWelcome = false;
+            $('.main-card').css('margin', '0');
+        }
+
         if((positionResume.top-100) < window.innerHeight && positionResume.bottom >= 0) {
             if (!inViewportResume) $('.card-container').show().animate({'margin-right': '40px'});
             inViewportResume = true;
@@ -24,13 +51,12 @@ $(document).ready(function() {
         }
 
         if((positionQuote.top) < window.innerHeight && positionQuote.bottom >= 0) {
-            if (!inViewportQuote) $('#quote-container').fadeIn("slow");
+            if (!inViewportQuote) $('#quote-container').animate({'padding-left': '2em'});
             inViewportQuote = true;
         } else {
             inViewportQuote = false;
-            $('#quote-container').hide();
+            $('#quote-container').css('padding-left', '0');
         }
-
         
         if((positionMap.top) < window.innerHeight && positionMap.bottom >= 0) {
             if (!inViewportMap) $('.world-map').fadeIn("slow");
@@ -44,7 +70,7 @@ $(document).ready(function() {
     $('#hamburger-container').on('click', function(e) {
         e.stopPropagation(); 
         $('#contact').show();
-        $('#contact').animate({'margin-left': '90%'});
+        $('#contact').animate({'margin-left': '80%'});
     });
 
     document.addEventListener('mousemove', (event) => {

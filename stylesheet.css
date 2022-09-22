@@ -31,8 +31,7 @@ nav {
     position: fixed;
     z-index: 5;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
 }
 
 #hamburger-container {
@@ -48,6 +47,7 @@ nav {
 
 #contact {
     display: none;
+    position: absolute;
     color: white;
     font-family: 'Lato';
     font-weight: 700;
@@ -109,6 +109,7 @@ nav {
     font-weight: 400;
     font-family: 'Poppins';
     cursor: default;
+    margin-top: -0.5em;
 }
 
 .dev:hover {
@@ -133,7 +134,7 @@ nav {
     overflow: hidden;
     color: white;
     backdrop-filter: blur(14px);
-    margin: 10px;
+    margin: 0px;
 }
 
 .github-icon {
@@ -268,12 +269,11 @@ svg circle:last-of-type {
 }
 
 #quote-container {
-    display: none;
     margin: 0 auto;
     text-align: justify;
     max-width: 40em;
     border-left: 3px solid grey;
-    padding-left: 2em;
+    padding-left: 0em;
     font-family: 'Lato';
     color: white;
 }
@@ -295,10 +295,7 @@ svg circle:last-of-type {
 }
 
 .map-view {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding: 10%;
     overflow: hidden;
 }
 

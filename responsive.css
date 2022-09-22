@@ -3,6 +3,10 @@ format: phone
 */
 @media only screen and (max-width:992px) {
 
+    nav {
+        width: 20%;
+    }
+
     .main-view {
         background-size: 100% 100%;
     }
@@ -24,8 +28,8 @@ format: phone
     }
 
     .ball {
-        height: 0.1em;
-        width: 0.1em;
+        height: 0.2em;
+        width: 0.2em;
     }
 
     .dev {
@@ -35,6 +39,13 @@ format: phone
     .a-container {
         display: flex;
         flex-direction: column;
+    }
+
+    .card-container {
+        width: 15em;
+        height: 22em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     #quote-container {
