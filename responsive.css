@@ -42,10 +42,7 @@ format: phone
     }
 
     .card-container {
-        width: 15em;
-        height: 22em;
-        padding-left: 1em;
-        padding-right: 1em;
+        margin: 20px;
     }
 
     #quote-container {

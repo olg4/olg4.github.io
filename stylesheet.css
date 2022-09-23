@@ -8,7 +8,19 @@ html {
 
 ::-webkit-scrollbar {
     width: 5px;
-  }
+}
+
+.skills-cards-container::-webkit-scrollbar {
+    width: 1px;
+}
+
+.skills-cards-container::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+.skills-cards-container::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
   
 ::-webkit-scrollbar-track {
     border-radius: 10px;
@@ -261,6 +273,98 @@ svg circle:last-of-type {
 
 #esi {
     color: #3498db;
+}
+
+.skills-view {
+    padding-top: 5vh;
+    padding-bottom: 30vh;
+}
+
+.skills-title {
+    color: white;
+    font-family: 'Poppins';
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.skills-cards-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 80%;
+    height: 10em;
+    overflow-x: auto;
+}
+
+.skills-card {
+    width: 7em;
+    height: 7em;
+    min-width: 7em;
+    margin: 15px;
+}
+
+.skill-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2.8em;
+    height: 2.8em;
+    margin: 1em auto;
+}
+
+#python-icon {
+    background-image: url(img/python.png);
+}
+
+#html-icon {
+    background-image: url(img/html-5.png);
+}
+
+#css-icon {
+    background-image: url(img/css.png);
+}
+
+#javascript-icon {
+    background-image: url(img/Javascript.png);
+}
+
+#java-icon {
+    background-image: url(img/java.png);
+}
+
+#c-icon {
+    background-image: url(img/c.png);
+}
+
+#cpp-icon {
+    background-image: url(img/Cpp.png);
+}
+
+#android-icon {
+    background-image: url(img/android.png);
+}
+
+#kotlin-icon {
+    background-image: url(img/Kotlin.png);
+}
+
+#git-icon {
+    background-image: url(img/git.png);
+}
+
+#linux-icon {
+    background-image: url(img/Linux.png);
+}
+
+#laravel-icon {
+    background-image: url(img/Laravel.png);
+}
+
+#spring-icon {
+    background-image: url(img/spring.png);
+}
+
+#mysql-icon {
+    background-image: url(img/MySQL.png);
 }
 
 .quote-view {
