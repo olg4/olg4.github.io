@@ -271,6 +271,30 @@ svg circle:last-of-type {
     stroke: #3498db; 
 }
 
+#xp-tools-icons {
+    display: none;
+    position: relative;
+    margin: 3em auto;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 10em;
+}
+
+.tool-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2em;
+    height: 2em;
+}
+
+#limesurvey-icon {
+    background-image: url(img/limesurvey.png);
+}
+
+#apache-icon {
+    background-image: url(img/apache.png);
+}
+
 #esi {
     color: #3498db;
 }
@@ -325,6 +349,10 @@ svg circle:last-of-type {
 
 #javascript-icon {
     background-image: url(img/Javascript.png);
+}
+
+#php-icon {
+    background-image: url(img/php.png);
 }
 
 #java-icon {

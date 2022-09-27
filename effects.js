@@ -91,6 +91,13 @@ $(document).ready(function() {
         $('#esi-description').hide();
     });
 
+    
+    $('.experience').hover(function() {
+        $('#xp-tools-icons').css('display', 'flex').show();
+    }, function() {
+        $('#xp-tools-icons').hide();
+    });
+
     $('#belgium').on('click', function(e) {
         e.stopPropagation(); 
         $('#belgium-description').show();
